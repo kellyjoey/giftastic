@@ -6,6 +6,7 @@ function renderButtons(){
 	for (i=0; i < cast.length; i++){
 		var btn = $("<button>");
 		btn.addClass('cast');
+		btn.addClass('btn btn-primary btn-large');
 		btn.attr('data-name', cast[i]);
 		btn.text(cast[i]);
 		$("#magicButtons").append(btn);
@@ -13,11 +14,12 @@ function renderButtons(){
 	}
 };
 
+
 renderButtons();
 
 
 
-$(".cast").on("click", function() {
+$(document).on("click", ".cast", function() {
 
 	console.log("you clicked a person");
 
@@ -36,7 +38,7 @@ $(".cast").on("click", function() {
           
           	for (var i = 0; i < results.length; i++) {
             //for each response create a div element	
-            	var gifDiv = $("<div class='item'>");
+            	var gifDiv = $("<div class='col-md-6'>");
             //Variable to hold the rating of each response object
             	var rating = results[i].rating;
             //Variable to hold the still image
@@ -52,7 +54,7 @@ $(".cast").on("click", function() {
             	personImage.attr("data-state", still);
             	personImage.attr("data-still", still);
 				personImage.attr("data-animate", animate);
-            //taking the gifDiv created on line 34 and putting the most recent response image and rating info.
+            //taking the gifDiv created on line 41 and putting the most recent response image and rating info.
             	gifDiv.prepend(p);
             	gifDiv.prepend(personImage.attr("src", still));
             //putting that gifDiv mentioned above in the div with the id magics from the HTML.

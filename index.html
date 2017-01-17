@@ -3,9 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>GifTastic</title>
-	<link ref="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
 </head>
 <body>
+	<div class="jumbotron">
+		<h1 div class="col-lg-offset-2">
+			<img src="assets/images/SNL_Bumper.gif" id="SNL" class="img-responsive">
+		</h1>
+	</div>
 
 	<div id="magicButtons">
 
@@ -13,9 +20,9 @@
 
 	<form id="magic-form">
 	<label for="cast-input">Add a Cast Member</label>
-	<input type="text" id="cast-input"><br>
+	<input type="text" id="cast-input">
 
-	<input id="addCast" type="submit" value="Submit">
+	<input id="addCast" type="submit" value="Submit" class="btn btn-danger btn-lrg">
 	</form>
 
 	<div id="magics">
